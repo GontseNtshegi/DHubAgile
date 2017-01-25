@@ -42,6 +42,7 @@
               <li class="active"><a href="#/">Home</a></li>
               <li><a ng-href="#/about">About</a></li>
               <li><a ng-href="#/">Contact</a></li>
+              <li><a ng-href="#/login">Login</a></li>
             </ul>
           </div>
         </div>
@@ -49,9 +50,10 @@
     </div>
 
     <div class="container">
-    <div ng-view=""></div>
+    <ng-view> </ng-view>
     </div>
-
+    
+    
     <div class="footer">
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
@@ -88,6 +90,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/login.js"></script>
         <!-- endbuild -->
 </body>
 </html>
