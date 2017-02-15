@@ -21,6 +21,8 @@
             </li>
         </ul>
     </div>
+    
+    
 </div>
 
 <div class="selectedStory">
@@ -34,15 +36,15 @@
                 <label ng-required="true">Title</label>
                 <input type="text" ng-model="main.editedUserStory.title" ng-required="true" ng-minlength="2" ng-maxlength="50"class="form-control"/>
                 <label ng-required="true">Status</label>
-                <select id="status" name="status" ng-model="main.editedUserStory.status" ng-required="true" ng-options="status in main.statuses" class="form-control"/>            
+                <select id="status" name="status"  ng-required="true" ng-options="status as status.name for status in main.statuses track by status.id" class="form-control" ng-model="main.editedUserStory.status"/>            
                 <label ng-required="true">Description</label>
                 <textarea ng-model="main.editedUserStory.description" rows="3" cols="35" id="desc"></textarea>
                 <label ng-required="true">Assign to</label>
-                <select id="teamMemeber" name="teamMemeber" ng-model="main.editedUserStory.assignTo" ng-required="true" ng-options="teamMembers.id as teamMembers.name for teamMembers in main.teamMemembers" class="form-control"/>
-                <p/>
-                    <a class="btn btn-lg btn-success" ng-click=""style="float:left;width: 100px;">Cancel</a>
-                    <a class="btn btn-lg btn-success" ng-click="" style="float:right;width: 200px;">Update user story</a>
-                
+                <select id="teamMemeber" name="teamMemeber" ng-model="main.editedUserStory.assignedTo" ng-required="true" ng-options="member as member.name for member in main.teamMembers track by member.id" class="form-control"/>
+                <div ng-if="main.currentUserStory">
+                    <button class="btn btn-lg btn-success" ng-click="main.cancel()"style="float:left;width: 100px;">Cancel</button>
+                    <button class="btn btn-lg btn-success" ng-click="main.upadate()" style="float:right;width: 200px;">Update user story</button>
+                </div>
             </div>
         </div>
         
