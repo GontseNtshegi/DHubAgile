@@ -138,3 +138,26 @@ body {
     border-bottom: 3px solid yellow;
     position: absolute;
     }
+    .selectedStory{
+    float: right;  
+    margin:0 0 0 0 ;
+    width: 350px;
+    font-size: 21px;
+    margin: auto;
+    box-shadow:0 0 30px 0;  
+    padding: 19px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    height: 100%;
+    background: #FFF;
+ 
+    }
+    .user-story-display-area{
+        float: left;
+        
+      
+    }
+    textarea{
+        width: 300px;
+    }

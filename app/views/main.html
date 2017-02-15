@@ -3,7 +3,7 @@
         <ul class="cols" ng-repeat="status in ::main.statuses">
             <h3 class="colStatus">{{::status.name}}</h3>
             <hr/>
-            <li class="userstory" ng-repeat="userstory in main.UserStories | filter:{status:status.name}">
+            <li class="userstory" ng-repeat="userstory in main.UserStories | filter:{status:status.name}"  ng-click="main.setCurrentUserStory(userstory)">
                 <div class="papercuts">
                 <article>
                     <div>
@@ -23,6 +23,31 @@
     </div>
 </div>
 
+<div class="selectedStory">
+    <h3>User Story Details</h3>
+    <form name="main.userStoryDetailsForm">
+        <div class="form-group">
+            <div class="controls">
+                
+            </div>
+            <div>
+                <label ng-required="true">Title</label>
+                <input type="text" ng-model="main.editedUserStory.title" ng-required="true" ng-minlength="2" ng-maxlength="50"class="form-control"/>
+                <label ng-required="true">Status</label>
+                <select id="status" name="status" ng-model="main.editedUserStory.status" ng-required="true" ng-options="status in main.statuses" class="form-control"/>            
+                <label ng-required="true">Description</label>
+                <textarea ng-model="main.editedUserStory.description" rows="3" cols="35" id="desc"></textarea>
+                <label ng-required="true">Assign to</label>
+                <select id="teamMemeber" name="teamMemeber" ng-model="main.editedUserStory.assignTo" ng-required="true" ng-options="teamMembers.id as teamMembers.name for teamMembers in main.teamMemembers" class="form-control"/>
+                <p/>
+                    <a class="btn btn-lg btn-success" ng-click=""style="float:left;width: 100px;">Cancel</a>
+                    <a class="btn btn-lg btn-success" ng-click="" style="float:right;width: 200px;">Update user story</a>
+                
+            </div>
+        </div>
+        
+    </form>
+</div>
 
 <!--<div class="jumbotron">
   <h1>'Allo, 'Allo!</h1>

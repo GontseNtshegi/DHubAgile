@@ -9,7 +9,14 @@
  */
 angular.module('DHubAgile')
   .controller('MainCtrl', function () {
-      
+      this.teamMembers=[{"id":"1","name":"Nick Cannon"},
+                        {"id":"2","name":"Simiso Zwane"},
+                        {"id":"3","name":"Catey Sime"},
+                        {"id":"4","name":"Bradley Gaviria"},
+                        {"id":"5","name":"Solomon Ntshegi"},
+                        {"id":"6","name":"Edward Jane"}
+  
+      ];
       this.statuses = [{"name":"Backlog"},
                     {"name":"To Do"},
                     {"name":"In Progress"},
@@ -34,7 +41,7 @@ angular.module('DHubAgile')
             "title":"MongoDB",
             "description":"Create a document for inserting users",
             "category":"Database",
-            "status":"Backlog",
+            "status":"Deploy",
             "assignedTo":"Simiso Zwane",
             "type":"Small Enhancement"
         },
@@ -57,4 +64,15 @@ angular.module('DHubAgile')
             "type":"Big Change"
         }
     ];
+    
+    /***** Methods for CRUD ****/
+    this.currentUserStory = null;//keep the original user story
+    this.editedUserStory={};// to store the edited user story
+     
+     /* method to call when a  user story is selected from the view */
+     this.setCurrentUserStory=function(userStory)
+     {
+         this.currentUserStory=userStory;
+         this.editedUserStory= angular.copy(this.currentUserStory);
+     };
   });
