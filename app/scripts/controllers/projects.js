@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name tangentApp.controller:ProjectsCtrl
+ * @name DHubAgile.controller:ProjectsCtrl
  * @description
  * # ProjectsCtrl
- * Controller of the tangentApp
+ * Controller of the DHubAgile
  */
-angular.module('tangentApp')
+angular.module('DHubAgile')
   .controller('ProjectsCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

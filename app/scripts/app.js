@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name tangentApp
+ * @name DHubAgile
  * @description
- * # tangentApp
+ * # DHubAgile
  *
  * Main module of the application.
  */
 angular
-  .module('tangentApp', [
+  .module('DHubAgile', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

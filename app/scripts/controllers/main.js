@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name tangentApp.controller:MainCtrl
+ * @name DHubAgile.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the tangentApp
+ * Controller of the DHubAgile
  */
-angular.module('tangentApp')
+angular.module('DHubAgile')
   .controller('MainCtrl', function () {
       
       this.statuses = [{"name":"Backlog"},

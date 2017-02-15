@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name tangentApp.controller:LoginCtrl
+ * @name DHubAgile.controller:LoginCtrl
  * @description
  * # LoginCtrl
- * Controller of the tangentApp
+ * Controller of the DHubAgile
  */
-angular.module('tangentApp')
+angular.module('DHubAgile')
   .controller('LoginCtrl',['$scope','$http','$window', '$location'], function ($scope, $http, $window,$location) {
     /*this.awesomeThings = [
       'HTML5 Boilerplate',
