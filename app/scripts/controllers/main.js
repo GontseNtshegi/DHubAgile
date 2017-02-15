@@ -13,9 +13,9 @@ angular.module('DHubAgile')
       this.statuses = [{"name":"Backlog"},
                     {"name":"To Do"},
                     {"name":"In Progress"},
-                    {"name":"Code Review"},
+                    {"name":"CodeReview"},
                     {"name":"QA Review"},
-                    {"name":"Ready for Release"}
+                    {"name":"Deploy"}
       ];
       
     
@@ -26,8 +26,8 @@ angular.module('DHubAgile')
             "description":"Integrate webservices with the application",
             "category":"SOAP",
             "status":"Backlog",
-            "AssignedTo":"Nick Cannon",
-            "Type":"Big Change"
+            "assignedTo":"Nick Cannon",
+            "type":"Big Change"
         },
         {
             "id":"2",
@@ -35,26 +35,26 @@ angular.module('DHubAgile')
             "description":"Create a document for inserting users",
             "category":"Database",
             "status":"Backlog",
-            "AssignedTo":"Simiso Zwane",
-            "Type":"Small Enhancement"
+            "assignedTo":"Simiso Zwane",
+            "type":"Small Enhancement"
         },
         {
             "id":"3",
             "title":"User Interface",
             "description":"User should be able to access the application from any device",
             "category":"UX Design/Responsive",
-            "status":"Backlog",
-            "AssignedTo":"Catey Sime",
-            "Type":"Big Change"
+            "status":"In Progress",
+            "assignedTo":"Catey Sime",
+            "type":"Big Change"
         },
         {
             "id":"4",
             "title":"Screen Logic",
             "description":"Separate screen logic from common reusable logic",
             "category":"Logic Layer",
-            "status":"Backlog",
-            "AssignedTo":"Bradley Gaviria",
-            "Type":"Big Change"
+            "status":"To Do",
+            "assignedTo":"Bradley Gaviria",
+            "type":"Big Change"
         }
     ];
   });

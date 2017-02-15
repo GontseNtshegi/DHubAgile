@@ -1,16 +1,16 @@
 <div class="user-story-display-area">
     <div class="user-story-display-wrapper">
-        <ul class="cols" ng-repeat="status in main.statuses" style="width:50%; float:left;">
-            <h3 class="colStatus">{{status.name}}</h3>
+        <ul class="cols" ng-repeat="status in ::main.statuses">
+            <h3 class="colStatus">{{::status.name}}</h3>
             <hr/>
-            <li class="userstory" ng-repeat="userstory in main.UserStories">
+            <li class="userstory" ng-repeat="userstory in main.UserStories | filter:{status:status.name}">
                 <div class="papercuts">
                 <article>
                     <div>
                         <button type="button" class="close">x</button>
                         <p class="title">{{userstory.title}}</p>
                     </div>
-                    <div class="type-bar {{userstory.type}}">
+                    <div class="type-bar  {{userstory.type}}">
                         
                     </div>
                     <div>
