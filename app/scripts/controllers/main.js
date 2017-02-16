@@ -20,8 +20,8 @@ angular.module('DHubAgile')
       this.statuses = [{"id":"1","name":"Backlog"},
                     {"id":"2","name":"To Do"},
                     {"id":"3","name":"In Progress"},
-                    {"id":"4","name":"CodeReview"},
-                    {"id":"5","name":"QA Review"}
+                    {"id":"4","name":"Review"},
+                    {"id":"5","name":"Deploy"}
       ];
       
     
@@ -33,7 +33,8 @@ angular.module('DHubAgile')
             "category":"SOAP",
             "status":"Backlog",
             "assignedTo":"Nick Cannon",
-            "type":"Big Change"
+            "type":"Big Change",
+            "estimate":""
         },
         {
             "id":"2",
@@ -42,7 +43,8 @@ angular.module('DHubAgile')
             "category":"Database",
             "status":"Backlog",
             "assignedTo":"Simiso Zwane",
-            "type":"Small Enhancement"
+            "type":"Small Enhancement",
+            "estimate":""
         },
         {
             "id":"3",
@@ -51,7 +53,8 @@ angular.module('DHubAgile')
             "category":"UX Design/Responsive",
             "status":"In Progress",
             "assignedTo":"Catey Sime",
-            "type":"Big Change"
+            "type":"Big Change",
+            "estimate":""
         },
         {
             "id":"4",
@@ -60,7 +63,8 @@ angular.module('DHubAgile')
             "category":"Logic Layer",
             "status":"To Do",
             "assignedTo":"Bradley Gaviria",
-            "type":"Big Change"
+            "type":"Big Change",
+            "estimate":""
         }
         ,
         {
@@ -68,9 +72,10 @@ angular.module('DHubAgile')
             "title":"Bed letter",
             "description":"Print out bed letter",
             "category":"Logic Layer",
-            "status":"QA Review",
+            "status":"Review",
             "assignedTo":"Bradley Gaviria",
-            "type":"Big Change"
+            "type":"Big Change",
+            "estimate":""
         }
         ,
         {
@@ -80,7 +85,8 @@ angular.module('DHubAgile')
             "category":"Logic Layer",
             "status":"To Do",
             "assignedTo":"Bradley Gaviria",
-            "type":"Big Change"
+            "type":"Big Change",
+            "estimate":""
         }
         ,
         {
@@ -88,9 +94,10 @@ angular.module('DHubAgile')
             "title":"Home Page",
             "description":"Single Homepage",
             "category":"Logic Layer",
-            "status":"QA Review",
+            "status":"Review",
             "assignedTo":"Bradley Gaviria",
-            "type":"Big Change"
+            "type":"Big Change",
+            "estimate":""
         }
         ,
         {
@@ -98,9 +105,10 @@ angular.module('DHubAgile')
             "title":"Screen Logic 3",
             "description":"Extract screen logic from common reusable logic",
             "category":"Logic Layer 5",
-            "status":"CodeReview",
+            "status":"Deploy",
             "assignedTo":"Bradley Gaviria",
-            "type":"Big Change"
+            "type":"Big Change",
+            "estimate":""
         }
     ];
     
@@ -138,5 +146,23 @@ angular.module('DHubAgile')
          this.editedUserStory =[];
          this.userStoryDetailsForm.$setPristine();
          this.userStoryDetailsForm.$setUntouched();
+     };
+     
+     /* Method to create a new user story */
+     this.create=function()
+     {
+         var newUserStory=angular.copy(this.editedUserStory);
+         newUserStory.id=Math.floor(Math.random()*9)+1;
+         this.UserStories.push(newUserStory);
+         this.clearForm();
+     };
+     
+     /* Method to delete a story */
+     this.delete=function(userStoryId)
+     {
+        this.UserStories.remove(function(userStory)
+        {
+           return userStory.id===userStoryId;  
+        });
      };
   });
