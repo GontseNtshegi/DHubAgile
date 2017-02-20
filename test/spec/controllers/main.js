@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('tangentApp'));
+  beforeEach(module('DHubAgile'));
 
   var MainCtrl,
     scope;

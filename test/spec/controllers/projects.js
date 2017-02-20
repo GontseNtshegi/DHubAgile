@@ -3,7 +3,7 @@
 describe('Controller: ProjectsCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('tangentApp'));
+  beforeEach(module('DHubAgile'));
 
   var ProjectsCtrl,
     scope;
