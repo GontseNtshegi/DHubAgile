@@ -120,13 +120,7 @@ angular.module('DHubAgile')
             $localStorage.cloudUserStories=this.UserStories;
             this.data = $localStorage.cloudUserStories;
         }
-        else if("update")
-        {
-             /*var attributes =['title','description','category','status','assignedTo','type','estimate'];
-         attributes.forEach(function(attr){
-             this.data[attr] = this.editedUserStory[attr];
-         });*/
-        }
+      
      
   };
     /*********************** END OF LOCAL STORAGE ***************************************/
