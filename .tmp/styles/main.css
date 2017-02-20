@@ -64,10 +64,8 @@ body {
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-device-width:468px) and (max-device-width:768px) {
-  .container {
-    max-width: 430px;   
-  }
+@media screen and (min-width:768px) {
+  
   /* Remove the padding we set earlier */
   .header,
   .marketing,
@@ -88,33 +86,7 @@ body {
   }
  
 }
-  /* Responsive: Laptops */
-@media screen and (min-device-width:100px) and (max-device-width:20000px) {
-  .container {
-    max-width: 1560px;   
-  }
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-  .container> cont{
-    max-height: 1560px;   
-  }
- 
-}
 /****************************************************** Gontse Custom Changes ****************************************************/
-
 /* Make statuses horizontal */
 .user-story-display-wrapper{ 
     display: inline;
