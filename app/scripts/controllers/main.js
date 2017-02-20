@@ -8,8 +8,12 @@
  * Controller of the DHubAgile
  */
 angular.module('DHubAgile')
-  .controller('MainCtrl', function () {
-      this.teamMembers=[{"id":"1","name":"Nick Cannon"},
+  .controller('MainCtrl', function ($scope,$localStorage) {
+   
+    
+    /*********************** LOCAL STORAGE ***************************************/
+    this.load=function(first){
+        this.teamMembers=[{"id":"1","name":"Nick Cannon"},
                         {"id":"2","name":"Simiso Zwane"},
                         {"id":"3","name":"Catey Sime"},
                         {"id":"4","name":"Bradley Gaviria"},
@@ -111,8 +115,23 @@ angular.module('DHubAgile')
             "estimate":""
         }
     ];
+        if(first==="1")
+        {
+            $localStorage.cloudUserStories=this.UserStories;
+            this.data = $localStorage.cloudUserStories;
+        }
+        else if("update")
+        {
+             /*var attributes =['title','description','category','status','assignedTo','type','estimate'];
+         attributes.forEach(function(attr){
+             this.data[attr] = this.editedUserStory[attr];
+         });*/
+        }
+     
+  };
+    /*********************** END OF LOCAL STORAGE ***************************************/
     
-    /***** Methods for CRUD ****/
+    /***** variables for CRUD ****/
     this.currentUserStory = null;//keep the original user story
     this.editedUserStory={};// to store the edited user story
      
@@ -121,16 +140,24 @@ angular.module('DHubAgile')
      {
          this.currentUserStory=userStory;
          this.editedUserStory= angular.copy(this.currentUserStory);
+        
      };
      
      /* Update user story method */
      this.update = function()
      {
-         var attributes =['title','description','category','status','assignedTo','type'];
-         attributes.forEach(function(attr){
-             this.currentUserStory[attr] = this.editedUserStory[attr];
-         });
-       this.clearForm(); 
+          for(var j=0;j<$localStorage.cloudUserStories.length;j++)//traverse through the user stories
+          {
+              if($localStorage.cloudUserStories[j] === this.currentUserStory)//if the user story we want to update is found
+              {
+                  this.editedUserStory.status=this.editedUserStory.status.name;//change the status to the current convention
+                  $localStorage.cloudUserStories[j]=angular.copy(this.editedUserStory);//copy the changes into the old user story
+                  j=$localStorage.cloudUserStories.length;//end the loop
+              }
+          }    
+       this.clearForm();//reset the html form
+       
+       
      };
      
      /* Method to Cancel */
@@ -151,18 +178,32 @@ angular.module('DHubAgile')
      /* Method to create a new user story */
      this.create=function()
      {
-         var newUserStory=angular.copy(this.editedUserStory);
-         newUserStory.id=Math.floor(Math.random()*9)+1;
-         this.UserStories.push(newUserStory);
+         $localStorage.cloudUserStories.push({
+            "id":Math.floor(Math.random()*100)+1,
+            "title":this.editedUserStory.title,
+            "description":this.editedUserStory.description,
+            "category":this.editedUserStory.category,
+            "status":this.editedUserStory.status.name,
+            "assignedTo":this.editedUserStory.assignedTo,
+            "type":this.editedUserStory.type,
+            "estimate":this.editedUserStory.estimate
+        });
          this.clearForm();
      };
      
      /* Method to delete a story */
-     this.delete=function(userStoryId)
+     this.delete=function(userStory)
      {
-        this.UserStories.remove(function(userStory)
-        {
-           return userStory.id===userStoryId;  
-        });
+          alert("Are you sure you want to delete this user story ?");
+          for(var i=0;i<$localStorage.cloudUserStories.length;i++)
+          {
+              if($localStorage.cloudUserStories[i].id === userStory.id && $localStorage.cloudUserStories[i].title===userStory.title)
+              {
+                  delete $localStorage.cloudUserStories[i];
+                  i=$localStorage.cloudUserStories.length;
+              }
+          }
+        
+        
      };
   });

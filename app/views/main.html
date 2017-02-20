@@ -1,13 +1,13 @@
-<div class="user-story-display-area">
+<div class="user-story-display-area" ng-init="main.load('1')">
     <div class="user-story-display-wrapper">
         <ul class="cols" ng-repeat="status in ::main.statuses">
             <h3 class="colStatus">{{::status.name}}</h3>
             <hr/>
-            <li class="userstory" ng-repeat="userstory in main.UserStories | filter:{status:status.name}"  ng-click="main.setCurrentUserStory(userstory)">
+            <li class="userstory" ng-repeat="userstory in main.data | filter:{status:status.name}"  ng-click="main.setCurrentUserStory(userstory)">
                 <div class="papercuts">
                 <article>
                     <div>
-                        <button type="button" class="close" ng-click="main.delete(userstory.id)">x</button>
+                        <button type="button" class="close" ng-click="main.delete(userstory)" >x</button>
                         <p class="title">{{userstory.title}}</p>
                     </div>
                     <div class="type-bar  {{userstory.type}}">
@@ -40,13 +40,17 @@
                 <label ng-required="true">Description</label>
                 <textarea ng-model="main.editedUserStory.description" rows="3" cols="35" id="desc"></textarea>
                 <label ng-required="true">Assign to</label>
-                <select id="teamMemeber" name="teamMemeber" ng-model="main.editedUserStory.assignedTo" ng-required="true" ng-options="member as member.name for member in main.teamMembers track by member.id" class="form-control"/>
+                <select id="teamMember" name="teamMember" ng-model="main.editedUserStory.assignedTo" ng-required="true" ng-options="member as member.name for member in main.teamMembers track by member.id" class="form-control"/>
                 <label ng-required="true">Estimate</label>
                 <input type="time" ng-model="main.editedUserStory.estimate" ng-rquired="true" placeholder="HH:mm:ss" min="08:00:00" max="17:00:00" style="width: 300px;height:50px ">
+                <label ng-required="true">Type</label>
+                <input type="text" ng-model="main.editedUserStory.type" ng-required="true" ng-minlength="2" ng-maxlength="50"class="form-control"/>
+                <label ng-required="true">Category</label>
+                <input type="text" ng-model="main.editedUserStory.category" ng-required="true" ng-minlength="2" ng-maxlength="50"class="form-control"/>
                 <p/>
                 <div ng-if="main.currentUserStory">
-                    <button class="btn btn-lg btn-success" ng-click="main.cancel()"style="float:left;width: 100px;">Cancel</button>
-                    <button class="btn btn-lg btn-success" ng-click="main.upadate()" style="float:right;width: 200px;">Update user story</button>
+                    <button class="btn btn-lg btn-success" ng-click="main.cancel()" style="float:left;width: 100px;">Cancel</button>
+                    <button class="btn btn-lg btn-success" ng-click="main.update()" style="float:right;width: 200px;">Update user story</button>
                 </div>
                 <div ng-if="!main.currentUserStory">
              <button class="btn btn-lg btn-success" ng-disabled="!main.userStoryDetailsForm.$valid" ng-click="main.create()" style="width:100%;">

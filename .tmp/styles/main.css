@@ -89,7 +89,7 @@ body {
  
 }
   /* Responsive: Laptops */
-@media screen and (min-device-width:1600px) and (max-device-width:2000px) {
+@media screen and (min-device-width:100px) and (max-device-width:20000px) {
   .container {
     max-width: 1560px;   
   }
