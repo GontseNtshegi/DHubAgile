@@ -59,8 +59,8 @@
 /* Make statuses horizontal */
 @media screen and (min-width:1200px) {
     
-    .container #contents{//main container
-        width: 1150px;/* Change */
+    .container #contents{
+        width: 1150px;
       
     }
     .user-story-display-area{
@@ -106,8 +106,6 @@
 	padding:10px;
 	margin: 8px auto;
 	background-color: #fff;
-	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 }
 .type-bar{
@@ -145,7 +143,7 @@
 
 @media screen and (min-width:1000px)and (max-width:1199px) {
     
-    .container #contents{//main container
+    .container #contents{
         width: 950px;/* Change */
       
     }
@@ -194,8 +192,6 @@
 	padding:10px;
 	margin: 8px auto;
 	background-color: #fff;
-	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 }
 .type-bar{
@@ -234,7 +230,7 @@
 
 @media screen and (min-width:900px)and (max-width:999px) {
     
-    .container #contents{//main container
+    .container #contents{
         width: 850px;/* Change */
       
     }
@@ -283,8 +279,6 @@
 	padding:10px;
 	margin: 8px auto;
 	background-color: #fff;
-	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 }
 .type-bar{
@@ -327,7 +321,7 @@
     /* Responsive: Portrait tablets and up */
 @media screen and (min-width:768px) and (max-width:899px) {
     
-    .container #contents{//main container
+    .container #contents{
         width: 750px;/* Change */
       
     }
@@ -376,8 +370,6 @@
 	padding:10px;
 	margin: 8px auto;
 	background-color: #fff;
-	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 }
 .type-bar{
@@ -420,7 +412,7 @@
     /* Responsive: Mobile Phones */
 @media screen and (min-width:600px) and (max-width:767px) {
     
-    .container #contents{//main container
+    .container #contents{
         width: 550px;/* Change */
        overflow: auto;
     }
@@ -470,8 +462,6 @@
 	padding:10px;
 	margin: 8px auto;
 	background-color: #fff;
-	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 }
 .type-bar{
@@ -507,7 +497,7 @@
  /* Responsive: Mobile Phones */
 @media screen and (min-width:480px) and (max-width:599px) {
     
-    .container #contents{//main container
+    .container #contents{
         width: 450px;/* Change */
       overflow: auto;
       height: 100%;
@@ -559,8 +549,6 @@
 	padding:10px;
 	margin: 8px auto;
 	background-color: #fff;
-	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 }
 .type-bar{
@@ -599,7 +587,7 @@
     /* Responsive: Mobile Phones */
 @media screen and (min-width:320px) and (max-width:479px) {
     
-    .container #contents{//main container
+    .container #contents{
       width: 320px;/* Change */
       overflow: auto;
       height: 100%;
@@ -651,8 +639,6 @@
 	padding:10px;
 	margin: 8px auto;
 	background-color: #fff;
-	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
 }
 .type-bar{
@@ -690,4 +676,4 @@
     .Label{
         font-size: 12px;
     }
-} 
+}
