@@ -134,8 +134,7 @@ angular.module('DHubAgile')
      {
          this.currentUserStory=userStory;
          this.editedUserStory= angular.copy(this.currentUserStory);
-         //this.editedUserStory.assignedTo=this.editedUserStory.assignedTo.name;
-         //this.editedUserStory.status=this.editedUserStory.status.name;
+        
      };
      
      /* Update user story method */
@@ -146,6 +145,7 @@ angular.module('DHubAgile')
               if($localStorage.cloudUserStories[j] === this.currentUserStory)//if the user story we want to update is found
               {
                   this.editedUserStory.status=this.editedUserStory.status.name;//change the status to the current convention
+                  this.editedUserStory.assignedTo=this.editedUserStory.assignedTo.name;//change the status to the current convention
                   $localStorage.cloudUserStories[j]=angular.copy(this.editedUserStory);//copy the changes into the old user story
                   j=$localStorage.cloudUserStories.length;//end the loop
               }
@@ -179,7 +179,7 @@ angular.module('DHubAgile')
             "description":this.editedUserStory.description,
             "category":this.editedUserStory.category,
             "status":this.editedUserStory.status.name,
-            "assignedTo":this.editedUserStory.assignedTo,
+            "assignedTo":this.editedUserStory.assignedTo.name,
             "type":this.editedUserStory.type,
             "estimate":this.editedUserStory.estimate
         });
