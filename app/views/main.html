@@ -35,16 +35,22 @@
             <div>
                 <label ng-required="true">Title</label>
                 <input type="text" ng-model="main.editedUserStory.title" ng-required="true" ng-minlength="2" ng-maxlength="50"class="form-control"/>
+                <p/>
                 <label ng-required="true">Status</label>
                 <select id="status" name="status"  ng-required="true" ng-options="status as status.name for status in main.statuses track by status.id" class="form-control" ng-model="main.editedUserStory.status" ng-value=""/>            
+                <p/>
                 <label ng-required="true">Description</label>
                 <textarea ng-model="main.editedUserStory.description" rows="3" cols="35" id="desc"></textarea>
+                <p/>
                 <label ng-required="true">Assign to</label>
                 <select id="teamMember" name="teamMember" ng-model="main.editedUserStory.assignedTo" ng-required="true" ng-options="member as member.name for member in main.teamMembers track by member.id" class="form-control"/>
+                <p/>
                 <label ng-required="true">Estimate</label>
                 <input type="time" ng-model="main.editedUserStory.estimate" ng-rquired="true" placeholder="HH:mm:ss" min="00:00:00" max="23:59:59">
+                <p/>
                 <label ng-required="true">Type</label>
                 <input type="text" ng-model="main.editedUserStory.type" ng-required="true" ng-minlength="2" ng-maxlength="50"class="form-control"/>
+                <p/>
                 <label ng-required="true">Category</label>
                 <input type="text" ng-model="main.editedUserStory.category" ng-required="true" ng-minlength="2" ng-maxlength="50"class="form-control"/>
                 <p/>
