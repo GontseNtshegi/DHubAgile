@@ -6,13 +6,6 @@
   padding: 0.2em 0;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-}
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -62,77 +55,639 @@ body {
 .marketing p + h4 {
   margin-top: 28px;
 }
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width:768px) {
-  
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-  .container> cont{
-    max-height: 430px;   
-  }
- 
-}
 /****************************************************** Gontse Custom Changes ****************************************************/
 /* Make statuses horizontal */
-.user-story-display-wrapper{ 
-    display: inline;
-   
-}
-.cols{ /* ul */
-    list-style-type: none; 
-     width:16%; 
-     float:left;
-}
-/* Make user stories look like real paper cuts*/
-.papercuts { 
-    position: relative;	
-	padding: 15px;
-	margin: 10px auto;
-	background-color: #fff;
-	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
-}
-
-.type-bar Big Change{
-    margin: auto;
-    width: 70%; 
-    border-bottom: 3px solid yellow;
-    position: absolute;
+@media screen and (min-width:1200px) {
+    
+    .container #contents{//main container
+        width: 1150px;/* Change */
+      
+    }
+    .user-story-display-area{
+        width: 805px;/* Change */
+        display: inline;
     }
     .selectedStory{
+    width: 345px;  /* Change */ 
     float: right;
-    margin:0 0 0 0 ;
-    width: 350px;;
-    font-size: 21px;
+    font-size: 16px;
     margin: auto;
     box-shadow:0 0 30px 0;  
-    padding:19px 19px 19px 19px; 
+    padding:19px 19px 25px 19px; 
     border: solid 1px #E5E5E5; 
     outline: 0; 
     font: normal 13px/100% Verdana, Tahoma, sans-serif; 
     height: 100%;
     background: #FFF;
- 
     }
-    .user-story-display-area{
-     float: left;
-      
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:154px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 150px;
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 130px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 100px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    }
+    input,select{
+        width: 300px;
+        height:50px;
     }
     textarea{
         width: 300px;
     }
+         .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:40%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:40%;
+        
+    }
+    .Label{
+        font-size: 15px;
+    }
+}  
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtFQUNFLGdCQUFnQjtFQUNoQixpQkFBaUI7RUFDakIsWUFBWTtFQUNaLGlCQUFpQjtDQUNsQjs7QUFFRDtFQUNFLFdBQVc7RUFDWCxVQUFVO0VBQ1YsYUFBYTtFQUNiLFlBQVk7Q0FDYjs7QUFFRCwyRUFBMkU7QUFDM0U7OztFQUdFLG1CQUFtQjtFQUNuQixvQkFBb0I7Q0FDckI7O0FBRUQsd0JBQXdCO0FBQ3hCO0VBQ0UsaUNBQWlDO0VBQ2pDLG9CQUFvQjtDQUNyQjtBQUNELGlFQUFpRTtBQUNqRTtFQUNFLGNBQWM7RUFDZCxpQkFBaUI7RUFDakIsa0JBQWtCO0VBQ2xCLHFCQUFxQjtDQUN0Qjs7QUFFRCx3QkFBd0I7QUFDeEI7RUFDRSxrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLDhCQUE4QjtDQUMvQjs7QUFFRDtFQUNFLGVBQWU7Q0FDaEI7O0FBRUQsK0NBQStDO0FBQy9DO0VBQ0UsbUJBQW1CO0VBQ25CLGlDQUFpQztDQUNsQztBQUNEO0VBQ0UsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtDQUNwQjs7QUFFRCxrQ0FBa0M7QUFDbEM7RUFDRSxlQUFlO0NBQ2hCO0FBQ0Q7RUFDRSxpQkFBaUI7Q0FDbEI7O0FBRUQseUNBQXlDO0FBQ3pDOztFQUVFLHVDQUF1QztFQUN2Qzs7O0lBR0UsZ0JBQWdCO0lBQ2hCLGlCQUFpQjtHQUNsQjtFQUNELDRCQUE0QjtFQUM1QjtJQUNFLG9CQUFvQjtHQUNyQjtFQUNELGlFQUFpRTtFQUNqRTtJQUNFLGlCQUFpQjtHQUNsQjtFQUNEO0lBQ0Usa0JBQWtCO0dBQ25COztDQUVGO0FBQ0QsbUlBQW1JO0FBQ25JLDhCQUE4QjtBQUM5QjtJQUNJLGdCQUFnQjs7Q0FFbkI7QUFDRCxPQUFPLFFBQVE7SUFDWCxzQkFBc0I7S0FDckIsVUFBVTtLQUNWLFdBQVc7Q0FDZjtBQUNELGdEQUFnRDtBQUNoRDtJQUNJLG1CQUFtQjtDQUN0QixjQUFjO0NBQ2Qsa0JBQWtCO0NBQ2xCLHVCQUF1QjtDQUd2QiwyRUFBMkU7Q0FDM0U7O0FBRUQ7SUFDSSxhQUFhO0lBQ2IsV0FBVztJQUNYLGdDQUFnQztJQUNoQyxtQkFBbUI7S0FDbEI7SUFDRDtJQUNBLGFBQWE7SUFDYixnQkFBZ0I7SUFDaEIsYUFBYTtJQUNiLGdCQUFnQjtJQUNoQixhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLDRCQUE0QjtJQUM1QiwwQkFBMEI7SUFDMUIsV0FBVztJQUNYLG1EQUFtRDtJQUNuRCxhQUFhO0lBQ2IsaUJBQWlCOztLQUVoQjtJQUNEO0tBQ0MsWUFBWTs7S0FFWjtJQUNEO1FBQ0ksYUFBYTtLQUNoQiIsImZpbGUiOiJtYWluLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLmJyb3dzZWhhcHB5IHtcbiAgbWFyZ2luOiAwLjJlbSAwO1xuICBiYWNrZ3JvdW5kOiAjY2NjO1xuICBjb2xvcjogIzAwMDtcbiAgcGFkZGluZzogMC4yZW0gMDtcbn1cblxuYm9keSB7XG4gIHBhZGRpbmc6IDA7XG4gIG1hcmdpbjogMDtcbiAgaGVpZ2h0OiAxMDAlO1xuICB3aWR0aDogMTAwJTtcbn1cblxuLyogRXZlcnl0aGluZyBidXQgdGhlIGp1bWJvdHJvbiBnZXRzIHNpZGUgc3BhY2luZyBmb3IgbW9iaWxlIGZpcnN0IHZpZXdzICovXG4uaGVhZGVyLFxuLm1hcmtldGluZyxcbi5mb290ZXIge1xuICBwYWRkaW5nLWxlZnQ6IDE1cHg7XG4gIHBhZGRpbmctcmlnaHQ6IDE1cHg7XG59XG5cbi8qIEN1c3RvbSBwYWdlIGhlYWRlciAqL1xuLmhlYWRlciB7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZTVlNWU1O1xuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xufVxuLyogTWFrZSB0aGUgbWFzdGhlYWQgaGVhZGluZyB0aGUgc2FtZSBoZWlnaHQgYXMgdGhlIG5hdmlnYXRpb24gKi9cbi5oZWFkZXIgaDMge1xuICBtYXJnaW4tdG9wOiAwO1xuICBtYXJnaW4tYm90dG9tOiAwO1xuICBsaW5lLWhlaWdodDogNDBweDtcbiAgcGFkZGluZy1ib3R0b206IDE5cHg7XG59XG5cbi8qIEN1c3RvbSBwYWdlIGZvb3RlciAqL1xuLmZvb3RlciB7XG4gIHBhZGRpbmctdG9wOiAxOXB4O1xuICBjb2xvcjogIzc3NztcbiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNlNWU1ZTU7XG59XG5cbi5jb250YWluZXItbmFycm93ID4gaHIge1xuICBtYXJnaW46IDMwcHggMDtcbn1cblxuLyogTWFpbiBtYXJrZXRpbmcgbWVzc2FnZSBhbmQgc2lnbiB1cCBidXR0b24gKi9cbi5qdW1ib3Ryb24ge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZTVlNWU1O1xufVxuLmp1bWJvdHJvbiAuYnRuIHtcbiAgZm9udC1zaXplOiAyMXB4O1xuICBwYWRkaW5nOiAxNHB4IDI0cHg7XG59XG5cbi8qIFN1cHBvcnRpbmcgbWFya2V0aW5nIGNvbnRlbnQgKi9cbi5tYXJrZXRpbmcge1xuICBtYXJnaW46IDQwcHggMDtcbn1cbi5tYXJrZXRpbmcgcCArIGg0IHtcbiAgbWFyZ2luLXRvcDogMjhweDtcbn1cblxuLyogUmVzcG9uc2l2ZTogUG9ydHJhaXQgdGFibGV0cyBhbmQgdXAgKi9cbkBtZWRpYSBzY3JlZW4gYW5kIChtaW4td2lkdGg6NzY4cHgpIHtcbiAgXG4gIC8qIFJlbW92ZSB0aGUgcGFkZGluZyB3ZSBzZXQgZWFybGllciAqL1xuICAuaGVhZGVyLFxuICAubWFya2V0aW5nLFxuICAuZm9vdGVyIHtcbiAgICBwYWRkaW5nLWxlZnQ6IDA7XG4gICAgcGFkZGluZy1yaWdodDogMDtcbiAgfVxuICAvKiBTcGFjZSBvdXQgdGhlIG1hc3RoZWFkICovXG4gIC5oZWFkZXIge1xuICAgIG1hcmdpbi1ib3R0b206IDMwcHg7XG4gIH1cbiAgLyogUmVtb3ZlIHRoZSBib3R0b20gYm9yZGVyIG9uIHRoZSBqdW1ib3Ryb24gZm9yIHZpc3VhbCBlZmZlY3QgKi9cbiAgLmp1bWJvdHJvbiB7XG4gICAgYm9yZGVyLWJvdHRvbTogMDtcbiAgfVxuICAuY29udGFpbmVyPiBjb250e1xuICAgIG1heC1oZWlnaHQ6IDQzMHB4OyAgIFxuICB9XG4gXG59XG4vKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqIEdvbnRzZSBDdXN0b20gQ2hhbmdlcyAqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqL1xuLyogTWFrZSBzdGF0dXNlcyBob3Jpem9udGFsICovXG4udXNlci1zdG9yeS1kaXNwbGF5LXdyYXBwZXJ7IFxuICAgIGRpc3BsYXk6IGlubGluZTtcbiAgIFxufVxuLmNvbHN7IC8qIHVsICovXG4gICAgbGlzdC1zdHlsZS10eXBlOiBub25lOyBcbiAgICAgd2lkdGg6MTYlOyBcbiAgICAgZmxvYXQ6bGVmdDtcbn1cbi8qIE1ha2UgdXNlciBzdG9yaWVzIGxvb2sgbGlrZSByZWFsIHBhcGVyIGN1dHMqL1xuLnBhcGVyY3V0cyB7IFxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcdFxuXHRwYWRkaW5nOiAxNXB4O1xuXHRtYXJnaW46IDEwcHggYXV0bztcblx0YmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcblx0LXdlYmtpdC1ib3gtc2hhZG93OiAwIDAgNHB4IHJnYmEoMCwgMCwgMCwgMC4yKSwgaW5zZXQgMCAwIDUwcHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuXHQtbW96LWJveC1zaGFkb3c6IDAgMCA0cHggcmdiYSgwLCAwLCAwLCAwLjIpLCBpbnNldCAwIDAgNTBweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG5cdGJveC1zaGFkb3c6IDAgMCA1MHB4IHJnYmEoMCwgMCwgMCwgMC45KSwgaW5zZXQgMCAwIDUwcHggcmdiYSgwLCAwLCAwLCAwLjIpO1xufVxuXG4udHlwZS1iYXIgQmlnIENoYW5nZXtcbiAgICBtYXJnaW46IGF1dG87XG4gICAgd2lkdGg6IDcwJTsgXG4gICAgYm9yZGVyLWJvdHRvbTogM3B4IHNvbGlkIHllbGxvdztcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgfVxuICAgIC5zZWxlY3RlZFN0b3J5e1xuICAgIGZsb2F0OiByaWdodDtcbiAgICBtYXJnaW46MCAwIDAgMCA7XG4gICAgd2lkdGg6IDM1MHB4OztcbiAgICBmb250LXNpemU6IDIxcHg7XG4gICAgbWFyZ2luOiBhdXRvO1xuICAgIGJveC1zaGFkb3c6MCAwIDMwcHggMDsgIFxuICAgIHBhZGRpbmc6MTlweCAxOXB4IDE5cHggMTlweDsgXG4gICAgYm9yZGVyOiBzb2xpZCAxcHggI0U1RTVFNTsgXG4gICAgb3V0bGluZTogMDsgXG4gICAgZm9udDogbm9ybWFsIDEzcHgvMTAwJSBWZXJkYW5hLCBUYWhvbWEsIHNhbnMtc2VyaWY7IFxuICAgIGhlaWdodDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kOiAjRkZGO1xuIFxuICAgIH1cbiAgICAudXNlci1zdG9yeS1kaXNwbGF5LWFyZWF7XG4gICAgIGZsb2F0OiBsZWZ0O1xuICAgICAgXG4gICAgfVxuICAgIHRleHRhcmVhe1xuICAgICAgICB3aWR0aDogMzAwcHg7XG4gICAgfVxuIl19 */
+@media screen and (min-width:1000px)and (max-width:1199px) {
+    
+    .container #contents{//main container
+        width: 950px;/* Change */
+      
+    }
+    .user-story-display-area{
+        width: 665px;/* Change */
+        display: inline;
+    }
+    .selectedStory{
+    width: 285px;  /* Change */ 
+    float: right;
+    font-size: 16px;
+    margin: auto;
+    box-shadow:0 0 30px 0;  
+    padding:19px 19px 25px 19px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    height: 100%;
+    background: #FFF;
+    }
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:124px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 140px;
+    font-size: 20px;
+    
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 110px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 90px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    }
+    input,select{
+        width: 250px;
+        height:40px;
+    }
+    textarea{
+        width: 250px;
+    }
+         .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:40%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:40%;
+        
+    }
+     .Label{
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (min-width:900px)and (max-width:999px) {
+    
+    .container #contents{//main container
+        width: 850px;/* Change */
+      
+    }
+    .user-story-display-area{
+        width: 595px;/* Change */
+        display: inline;
+    }
+    .selectedStory{
+    width: 255px;  /* Change */ 
+    float: right;
+    font-size: 16px;
+    margin: auto;
+    box-shadow:0 0 30px 0;  
+    padding:19px 19px 25px 19px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    height: 100%;
+    background: #FFF;
+    }
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:80px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100px;
+    font-size: 12px;
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+    font-size: 15px;
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 70px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 50px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 11.5px;
+    }
+    input,select{
+        width: 200px;
+        height:40px;
+    }
+    textarea{
+        width: 200px;
+    }
+    article{
+        font-size: 11px;
+    }
+
+    .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:40%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:40%;
+        
+    }
+    .Label{
+        font-size:10.1px;
+    }
+}  
+    /* Responsive: Portrait tablets and up */
+@media screen and (min-width:768px) and (max-width:899px) {
+    
+    .container #contents{//main container
+        width: 750px;/* Change */
+      
+    }
+    .user-story-display-area{
+        width: 525px;/* Change */
+        display: inline;
+    }
+    .selectedStory{
+    width: 225px;  /* Change */ 
+    float: right;
+    font-size: 16px;
+    margin: auto;
+    box-shadow:0 0 30px 0;  
+    padding:19px 19px 25px 19px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    height: 100%;
+    background: #FFF;
+    }
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:90px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 80px;
+    font-size: 11px;
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+    font-size: 16px;
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 70px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 50px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    font-size:9px;
+    }
+    input,select{
+        width: 190px;
+        height:30px;
+    }
+    textarea{
+        width: 190px;
+    }
+     article{
+        font-size: 11px;
+    }
+      .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:40%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:40%;
+        
+    }
+    .Label{
+        font-size:8px;
+    }
+} 
+
+    /* Responsive: Mobile Phones */
+@media screen and (min-width:600px) and (max-width:767px) {
+    
+    .container #contents{//main container
+        width: 550px;/* Change */
+       overflow: auto;
+    }
+    .user-story-display-area{
+        width: 500px;/* Change */
+        display: inline;
+       height: 40%;
+       float: left;
+    }
+    .selectedStory{
+    width: 500px;  /* Change */ 
+    font-size: 16px;
+    margin:auto;
+    box-shadow:0 0 30px 0;  
+    padding:19px 19px 25px 19px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    background: #FFF;
+    height: 40%;
+    float:left;
+    }
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:100px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100px;
+    font-size: 16px;
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 90px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 70px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    }
+    input,select{
+        width: 460px;
+        height:50px;
+    }
+    textarea{
+        width: 460px;
+    }
+          .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:50%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:50%;
+        
+    }
+} 
+
+ /* Responsive: Mobile Phones */
+@media screen and (min-width:480px) and (max-width:599px) {
+    
+    .container #contents{//main container
+        width: 450px;/* Change */
+      overflow: auto;
+      height: 100%;
+    }
+    .user-story-display-area{
+        width: 400px;/* Change */
+        display: inline;
+        height: 40%;
+       float: left;
+    }
+    .selectedStory{
+    width: 400px;  /* Change */ 
+    font-size: 16px;
+    margin:auto;
+    box-shadow:0 0 30px 0;  
+    padding:19px 19px 25px 19px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    background: #FFF;
+    height: 40%;
+    float: left;
+    }
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:80px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 90px;
+    font-size: 12px;
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+    
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 75px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 55px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 10px;
+    }
+    input,select{
+        width: 360px;
+        height:50px;
+    }
+    textarea{
+        width: 360px;
+    }
+    article{
+        font-size:12px;
+    }
+    .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:50%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:50%;
+        
+    }
+} 
+    /* Responsive: Mobile Phones */
+@media screen and (min-width:320px) and (max-width:479px) {
+    
+    .container #contents{//main container
+      width: 320px;/* Change */
+      overflow: auto;
+      height: 100%;
+    }
+    .user-story-display-area{
+        width: 300px;/* Change */
+        display: inline;
+        height: 40%;
+       float: left;
+    }
+    .selectedStory{
+    width: 300px;  /* Change */ 
+    font-size: 16px;
+    margin:auto;
+    box-shadow:0 0 30px 0;  
+    padding:19px 19px 25px 19px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    background: #FFF;
+    height: 40%;
+    float: left;
+    }
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:60px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 70px;
+    font-size: 10.5px;
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+    
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 50px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 30px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 8px;
+    }
+    input,select{
+        width: 260px;
+        height:50px;
+    }
+    textarea{
+        width: 260px;
+    }
+    article{
+        font-size:8px;
+    }
+    .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:50%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:50%;
+        
+    }
+    .Label{
+        font-size: 12px;
+    }
+} 

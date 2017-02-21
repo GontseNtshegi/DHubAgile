@@ -6,13 +6,6 @@
   padding: 0.2em 0;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-}
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -62,77 +55,639 @@ body {
 .marketing p + h4 {
   margin-top: 28px;
 }
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width:768px) {
-  
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-  .container> cont{
-    max-height: 430px;   
-  }
- 
-}
 /****************************************************** Gontse Custom Changes ****************************************************/
 /* Make statuses horizontal */
-.user-story-display-wrapper{ 
-    display: inline;
-   
-}
-.cols{ /* ul */
-    list-style-type: none; 
-     width:16%; 
-     float:left;
-}
-/* Make user stories look like real paper cuts*/
-.papercuts { 
-    position: relative;	
-	padding: 15px;
-	margin: 10px auto;
-	background-color: #fff;
-	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
-}
-
-.type-bar Big Change{
-    margin: auto;
-    width: 70%; 
-    border-bottom: 3px solid yellow;
-    position: absolute;
+@media screen and (min-width:1200px) {
+    
+    .container #contents{//main container
+        width: 1150px;/* Change */
+      
+    }
+    .user-story-display-area{
+        width: 805px;/* Change */
+        display: inline;
     }
     .selectedStory{
+    width: 345px;  /* Change */ 
     float: right;
-    margin:0 0 0 0 ;
-    width: 350px;;
-    font-size: 21px;
+    font-size: 16px;
     margin: auto;
     box-shadow:0 0 30px 0;  
-    padding:19px 19px 19px 19px; 
+    padding:19px 19px 25px 19px; 
     border: solid 1px #E5E5E5; 
     outline: 0; 
     font: normal 13px/100% Verdana, Tahoma, sans-serif; 
     height: 100%;
     background: #FFF;
- 
     }
-    .user-story-display-area{
-     float: left;
-      
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:154px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 150px;
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 130px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 100px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    }
+    input,select{
+        width: 300px;
+        height:50px;
     }
     textarea{
         width: 300px;
     }
+         .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:40%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:40%;
+        
+    }
+    .Label{
+        font-size: 15px;
+    }
+}  
+
+@media screen and (min-width:1000px)and (max-width:1199px) {
+    
+    .container #contents{//main container
+        width: 950px;/* Change */
+      
+    }
+    .user-story-display-area{
+        width: 665px;/* Change */
+        display: inline;
+    }
+    .selectedStory{
+    width: 285px;  /* Change */ 
+    float: right;
+    font-size: 16px;
+    margin: auto;
+    box-shadow:0 0 30px 0;  
+    padding:19px 19px 25px 19px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    height: 100%;
+    background: #FFF;
+    }
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:124px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 140px;
+    font-size: 20px;
+    
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 110px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 90px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    }
+    input,select{
+        width: 250px;
+        height:40px;
+    }
+    textarea{
+        width: 250px;
+    }
+         .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:40%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:40%;
+        
+    }
+     .Label{
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (min-width:900px)and (max-width:999px) {
+    
+    .container #contents{//main container
+        width: 850px;/* Change */
+      
+    }
+    .user-story-display-area{
+        width: 595px;/* Change */
+        display: inline;
+    }
+    .selectedStory{
+    width: 255px;  /* Change */ 
+    float: right;
+    font-size: 16px;
+    margin: auto;
+    box-shadow:0 0 30px 0;  
+    padding:19px 19px 25px 19px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    height: 100%;
+    background: #FFF;
+    }
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:80px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100px;
+    font-size: 12px;
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+    font-size: 15px;
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 70px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 50px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 11.5px;
+    }
+    input,select{
+        width: 200px;
+        height:40px;
+    }
+    textarea{
+        width: 200px;
+    }
+    article{
+        font-size: 11px;
+    }
+
+    .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:40%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:40%;
+        
+    }
+    .Label{
+        font-size:10.1px;
+    }
+}  
+    /* Responsive: Portrait tablets and up */
+@media screen and (min-width:768px) and (max-width:899px) {
+    
+    .container #contents{//main container
+        width: 750px;/* Change */
+      
+    }
+    .user-story-display-area{
+        width: 525px;/* Change */
+        display: inline;
+    }
+    .selectedStory{
+    width: 225px;  /* Change */ 
+    float: right;
+    font-size: 16px;
+    margin: auto;
+    box-shadow:0 0 30px 0;  
+    padding:19px 19px 25px 19px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    height: 100%;
+    background: #FFF;
+    }
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:90px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 80px;
+    font-size: 11px;
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+    font-size: 16px;
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 70px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 50px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    font-size:9px;
+    }
+    input,select{
+        width: 190px;
+        height:30px;
+    }
+    textarea{
+        width: 190px;
+    }
+     article{
+        font-size: 11px;
+    }
+      .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:40%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:40%;
+        
+    }
+    .Label{
+        font-size:8px;
+    }
+} 
+
+    /* Responsive: Mobile Phones */
+@media screen and (min-width:600px) and (max-width:767px) {
+    
+    .container #contents{//main container
+        width: 550px;/* Change */
+       overflow: auto;
+    }
+    .user-story-display-area{
+        width: 500px;/* Change */
+        display: inline;
+       height: 40%;
+       float: left;
+    }
+    .selectedStory{
+    width: 500px;  /* Change */ 
+    font-size: 16px;
+    margin:auto;
+    box-shadow:0 0 30px 0;  
+    padding:19px 19px 25px 19px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    background: #FFF;
+    height: 40%;
+    float:left;
+    }
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:100px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100px;
+    font-size: 16px;
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 90px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 70px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    }
+    input,select{
+        width: 460px;
+        height:50px;
+    }
+    textarea{
+        width: 460px;
+    }
+          .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:50%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:50%;
+        
+    }
+} 
+
+ /* Responsive: Mobile Phones */
+@media screen and (min-width:480px) and (max-width:599px) {
+    
+    .container #contents{//main container
+        width: 450px;/* Change */
+      overflow: auto;
+      height: 100%;
+    }
+    .user-story-display-area{
+        width: 400px;/* Change */
+        display: inline;
+        height: 40%;
+       float: left;
+    }
+    .selectedStory{
+    width: 400px;  /* Change */ 
+    font-size: 16px;
+    margin:auto;
+    box-shadow:0 0 30px 0;  
+    padding:19px 19px 25px 19px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    background: #FFF;
+    height: 40%;
+    float: left;
+    }
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:80px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 90px;
+    font-size: 12px;
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+    
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 75px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 55px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 10px;
+    }
+    input,select{
+        width: 360px;
+        height:50px;
+    }
+    textarea{
+        width: 360px;
+    }
+    article{
+        font-size:12px;
+    }
+    .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:50%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:50%;
+        
+    }
+} 
+    /* Responsive: Mobile Phones */
+@media screen and (min-width:320px) and (max-width:479px) {
+    
+    .container #contents{//main container
+      width: 320px;/* Change */
+      overflow: auto;
+      height: 100%;
+    }
+    .user-story-display-area{
+        width: 300px;/* Change */
+        display: inline;
+        height: 40%;
+       float: left;
+    }
+    .selectedStory{
+    width: 300px;  /* Change */ 
+    font-size: 16px;
+    margin:auto;
+    box-shadow:0 0 30px 0;  
+    padding:19px 19px 25px 19px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    background: #FFF;
+    height: 40%;
+    float: left;
+    }
+    
+.user-story-display-wrapper{ 
+    display: inline;
+}
+.cols{ /* ul */
+     list-style-type: none; 
+     width:60px; /* Change */
+     float:left;
+}
+.colStatus{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 70px;
+    font-size: 10.5px;
+}
+.coluser{
+    font-weight: bolder;
+    line-height: 40px;
+    width: 100%;
+    
+}
+/* Make user stories look like real paper cuts*/
+.papercuts { 
+    width: 50px;/* Change */
+    position: relative;	
+	padding:10px;
+	margin: 8px auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.type-bar{
+    width: 30px;  /* Change */
+    border-bottom: 2px solid lightgreen;
+    position: absolute;
+    }  
+    .title{
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 8px;
+    }
+    input,select{
+        width: 260px;
+        height:50px;
+    }
+    textarea{
+        width: 260px;
+    }
+    article{
+        font-size:8px;
+    }
+    .btn btn-lg btn-success #create{
+        width:100%;
+    }
+    .btn btn-lg btn-success #update{
+        float:right;
+        width:50%;
+    }
+    .btn btn-lg btn-success #cancel{
+        float:left;
+        width:50%;
+        
+    }
+    .Label{
+        font-size: 12px;
+    }
+} 

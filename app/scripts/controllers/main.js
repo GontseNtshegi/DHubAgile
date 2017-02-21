@@ -134,7 +134,8 @@ angular.module('DHubAgile')
      {
          this.currentUserStory=userStory;
          this.editedUserStory= angular.copy(this.currentUserStory);
-        
+         //this.editedUserStory.assignedTo=this.editedUserStory.assignedTo.name;
+         //this.editedUserStory.status=this.editedUserStory.status.name;
      };
      
      /* Update user story method */

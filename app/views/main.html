@@ -26,7 +26,7 @@
 </div>
 
 <div class="selectedStory">
-    <h3>User Story Details</h3>
+    <h3 class="coluser">User Story Details</h3>
     <form name="main.userStoryDetailsForm">
         <div class="form-group">
             <div class="controls">
@@ -36,30 +36,31 @@
                 <label ng-required="true">Title</label>
                 <input type="text" ng-model="main.editedUserStory.title" ng-required="true" ng-minlength="2" ng-maxlength="50"class="form-control"/>
                 <label ng-required="true">Status</label>
-                <select id="status" name="status"  ng-required="true" ng-options="status as status.name for status in main.statuses track by status.id" class="form-control" ng-model="main.editedUserStory.status"/>            
+                <select id="status" name="status"  ng-required="true" ng-options="status as status.name for status in main.statuses track by status.id" class="form-control" ng-model="main.editedUserStory.status" ng-value=""/>            
                 <label ng-required="true">Description</label>
                 <textarea ng-model="main.editedUserStory.description" rows="3" cols="35" id="desc"></textarea>
                 <label ng-required="true">Assign to</label>
                 <select id="teamMember" name="teamMember" ng-model="main.editedUserStory.assignedTo" ng-required="true" ng-options="member as member.name for member in main.teamMembers track by member.id" class="form-control"/>
                 <label ng-required="true">Estimate</label>
-                <input type="time" ng-model="main.editedUserStory.estimate" ng-rquired="true" placeholder="HH:mm:ss" min="08:00:00" max="17:00:00" style="width: 300px;height:50px ">
+                <input type="time" ng-model="main.editedUserStory.estimate" ng-rquired="true" placeholder="HH:mm:ss" min="00:00:00" max="23:59:59">
                 <label ng-required="true">Type</label>
                 <input type="text" ng-model="main.editedUserStory.type" ng-required="true" ng-minlength="2" ng-maxlength="50"class="form-control"/>
                 <label ng-required="true">Category</label>
                 <input type="text" ng-model="main.editedUserStory.category" ng-required="true" ng-minlength="2" ng-maxlength="50"class="form-control"/>
                 <p/>
                 <div ng-if="main.currentUserStory">
-                    <button class="btn btn-lg btn-success" ng-click="main.cancel()" style="float:left;width: 100px;">Cancel</button>
-                    <button class="btn btn-lg btn-success" ng-click="main.update()" style="float:right;width: 200px;">Update user story</button>
+                    <button class="btn btn-lg btn-success" id="cancel" ng-click="main.cancel()" ><label class="Label">Cancel</label></button>
+                    <button class="btn btn-lg btn-success" id="update" ng-click="main.update()" ><label class="Label">Update user story</label></button>
                 </div>
                 <div ng-if="!main.currentUserStory">
-             <button class="btn btn-lg btn-success" ng-disabled="!main.userStoryDetailsForm.$valid" ng-click="main.create()" style="width:100%;">
+             <button class="btn btn-lg btn-success" id="create" ng-disabled="!main.userStoryDetailsForm.$valid" ng-click="main.create()" >
              Create user story
              </button>
 
             </div>
         </div>
-        
+        </div>
     </form>
 </div>
+
 
